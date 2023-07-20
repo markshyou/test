@@ -1,0 +1,9 @@
+kubectl create namespace interface-test
+
+kubectl apply -k .
+
+kubectl get pod -n interface-test
+
+kubectl exec -it -n interface-test irsa-test -- bash
+
+# aws sts get-caller-identity
